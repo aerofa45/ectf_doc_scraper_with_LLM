@@ -53,7 +53,7 @@ Before running this project, make sure **Ollama is installed** on your system. O
 
 [https://ollama.com](https://ollama.com)
 
-After installing Ollama, open **PowerShell** inside your project directory and follow these steps.
+After installing Ollama, git clone my repo in your directory, and then open **PowerShell** inside your project directory and follow these steps.
 
 ### 1. Create and activate a virtual environment
 
