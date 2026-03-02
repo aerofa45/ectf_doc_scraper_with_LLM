@@ -1,14 +1,14 @@
-Overview
+## Overview
 
 This project implements a domain-restricted web crawler to scrape the MITRE eCTF 2026 rules website and then processes the collected documentation using a locally hosted large language model (LLM) through Ollama. The goal is to convert unstructured technical documentation into structured, machine-readable JSON that captures page summaries, inferred CLI commands, protocol terms, and operational constraints.
 
 The pipeline combines traditional scraping techniques with LLM-based semantic extraction to build a structured knowledge base from raw HTML documentation.
 
-Motivation
+## Motivation
 
 Technical documentation is often lengthy, semi-structured, and difficult to query programmatically. While basic scraping can collect text, it does not provide structured insights such as implicit command usage, ordering constraints, or protocol-level details. This project addresses that limitation by augmenting rule-based extraction with an LLM that enforces a strict JSON schema, enabling downstream automation and analysis.
 
-System Design
+## System Design
 
 The system operates in two stages. First, a breadth-first crawler traverses links under the target domain, normalizes URLs, prevents duplicate queue entries, and exports each page as a Markdown file. The crawler maintains separate seen and queued sets to prevent redundant processing and uses rate limiting to avoid overloading the target server.
 
@@ -41,7 +41,7 @@ For each documentation page, the LLM generates a JSON object similar to the foll
 ]
 }
 
-Technical Details
+## Technical Details
 
 The crawler is implemented in Python using requests and BeautifulSoup for HTML retrieval and parsing. A deque is used for efficient breadth-first traversal, and duplicate URLs are prevented using a dedicated queued set. Markdown files are stored locally for reproducibility and offline processing.
 
@@ -64,7 +64,7 @@ python -m venv .venv
 
 You should now see `(.venv)` at the beginning of your prompt.
 
----
+
 
 ### 2. Install the package in editable mode
 
@@ -82,7 +82,7 @@ ectf-scrape --help
 
 If that runs successfully, the CLI is ready.
 
----
+
 
 ### 3. Start Ollama
 
@@ -100,7 +100,7 @@ ollama pull llama3.1:8b
 
 Leave `ollama serve` running.
 
----
+
 
 ### 4. Run the full pipeline
 
@@ -126,7 +126,7 @@ This command will:
 * Generate `.ollama.json` files
 * Build a consolidated `commands.txt` index
 
----
+
 
 ## Relevance
 
