@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: ectf-scrape
+Version: 0.2.0
+Summary: Crawl docs and extract ectf commands + pages (with optional local LLM via Ollama)
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.32.0
+Requires-Dist: beautifulsoup4>=4.12.3
+Requires-Dist: lxml>=5.2.0
+Requires-Dist: rich>=13.7.1
+Requires-Dist: tqdm>=4.66.4
+Requires-Dist: urllib3>=2.2.2

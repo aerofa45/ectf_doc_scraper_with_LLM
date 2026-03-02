@@ -1,0 +1,13 @@
+pyproject.toml
+src/ectf_scrape/__init__.py
+src/ectf_scrape/cli.py
+src/ectf_scrape/crawler.py
+src/ectf_scrape/extract.py
+src/ectf_scrape/io_utils.py
+src/ectf_scrape/ollama_processor.py
+src/ectf_scrape.egg-info/PKG-INFO
+src/ectf_scrape.egg-info/SOURCES.txt
+src/ectf_scrape.egg-info/dependency_links.txt
+src/ectf_scrape.egg-info/entry_points.txt
+src/ectf_scrape.egg-info/requires.txt
+src/ectf_scrape.egg-info/top_level.txt

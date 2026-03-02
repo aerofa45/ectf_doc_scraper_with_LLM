@@ -1,0 +1,16 @@
+[project]
+name = "ectf-scrape"
+version = "0.2.0"
+description = "Crawl docs and extract ectf commands + pages (with optional local LLM via Ollama)"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.32.0",
+  "beautifulsoup4>=4.12.3",
+  "lxml>=5.2.0",
+  "rich>=13.7.1",
+  "tqdm>=4.66.4",
+  "urllib3>=2.2.2",
+]
+
+[project.scripts]
+ectf-scrape = "ectf_scrape.cli:main"
